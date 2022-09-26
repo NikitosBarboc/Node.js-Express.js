@@ -1,0 +1,26 @@
+{
+  "name": "nodejs-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikitosBarboc/Node.js-Express.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikitosBarboc/Node.js-Express.js/issues"
+  },
+  "homepage": "https://github.com/NikitosBarboc/Node.js-Express.js#readme",
+  "devDependencies": {
+    "@types/node": "^18.7.20",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
+  }
+}
