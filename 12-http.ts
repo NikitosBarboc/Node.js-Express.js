@@ -5,7 +5,7 @@ const server = createServer((req: IncomingMessage, res: ServerResponse) => {
     res.end('Welcome to our home page!');
   }
   if (req.url === '/about') {
-    res.end('Welcome to bebra-town!');
+    res.end('Welcome to town!');
   }
   res.end(`<h1>Oops!</h1> <p>Page not found</p>`)
 });

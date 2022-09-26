@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "npm run build:live",
+    "start": "tsc app && node app",
+    "dev": "nodemon app.ts --exec \"ts-node\" ./app.ts",
     "build": "tsc -p .",
-    "build:live": "nodemon --watch 'src/**/*.ts' --exec \"ts-node\" src/index.ts"
+    "build:live": "nodemon --watch './**/*.ts' --exec \"ts-node\" src/index.ts"
   },
   "repository": {
     "type": "git",
