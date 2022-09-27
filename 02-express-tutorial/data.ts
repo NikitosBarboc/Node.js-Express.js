@@ -1,4 +1,5 @@
 import IProduct from './src/final/IProduct';
+import IPeople from './src/final/IPeople';
 
 const products: IProduct[] = [
   {
@@ -34,7 +35,7 @@ const products: IProduct[] = [
     desc: 'I\'m baby direct trade farm-to-table hell of, YOLO readymade raw denim venmo whatever organic gluten-free kitsch schlitz irony af flexitarian.',
   },
 ];
-const people = [
+const people: IPeople[] = [
   { id: 1, name: 'john' },
   { id: 2, name: 'peter' },
   { id: 3, name: 'susan' },
