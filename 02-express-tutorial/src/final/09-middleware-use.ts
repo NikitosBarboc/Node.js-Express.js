@@ -1,9 +1,9 @@
 import express from 'express';
-import morgan from 'morgan';
+import logger from '../logger';
 
 const app = express();
 
-app.use(morgan('tiny'));
+app.use('/api', logger);
 
 app.get('/', (req, res) => {
   res.status(200).send('Home');
