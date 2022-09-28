@@ -1,18 +1,17 @@
 import express from 'express';
-import path from 'path';
-import router from './routes/people';
-import loginRouter from './routes/auth';
+import route from './routes/products';
+import peopleRouter from './routes/people';
 
 const app = express();
 
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static(path.resolve(__dirname, './methods-public')));
+app.use('/api', route);
+app.use('/api/people', peopleRouter);
 
-app.use('/api/people', router);
-app.use('/login', loginRouter);
-
-app.listen(5000, () => {
-  console.log('server is listening on port 5000....');
+app.get('/', (req, res) => {
+  res.send('<h1>Hello</h1> <a href="/api">Api</a>');
 });
+
+app.listen(5000);
